@@ -150,7 +150,14 @@ function add(index){
         strr.pop();
         strNum.pop();
     }
-    search(index);
+    if(Array.isArray(index)==true){
+        for(var i=0;i<index.length;i++){
+            search(index[i]);
+        }
+    }
+    else{
+        search(index);
+    }
     for(var i=0;i<10;i++){
         end();
     }
